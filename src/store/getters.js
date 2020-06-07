@@ -3,6 +3,7 @@ const palette = state => state.app.config.palette
 const isLoading = state => state.app.isLoading
 const users = state => state.users
 const currentUser = state => state.currentUser
+const categories = state => state.categories
 
 export {
   config,
@@ -10,4 +11,5 @@ export {
   isLoading,
   users,
   currentUser,
+  categories,
 }

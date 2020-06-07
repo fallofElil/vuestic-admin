@@ -17,11 +17,15 @@ const store = new Vuex.Store({
   state: {
     currentUser: 'Sergey',
     users: [],
+    categories: [],
     products: [],
   },
   mutations: {
     SET_USERS_TO_STATE: (state, payload) => {
       state.users = payload
+    },
+    SET_CATEGORIES: (state, payload) => {
+      state.categories = payload
     },
   },
   actions: {
@@ -34,7 +38,21 @@ const store = new Vuex.Store({
           return res.data.users
         })
         .catch(err => {
-          console.error('ERROR IN GETTING USERS ', err)
+          console.error('ОШИБКА ПОЛУЧЕНИЕ СПИСКА ПОЛЬЗОВАТЕЛЕЙ ', err)
+          return err
+        })
+    },
+    GET_CATEGORIES ({ commit }) {
+      return axios('http://localhost:8082/api/categories', {
+        method: 'GET',
+      })
+        .then(res => {
+          console.debug('CATEGORIES ', res.data)
+          commit('SET_CATEGORIES', res.data)
+          return res.data
+        })
+        .catch(err => {
+          console.error('ОШИБКА ПОЛУЧЕНИЕ СПИСКА КАТЕГОРИЙ ', err)
           return err
         })
     },
