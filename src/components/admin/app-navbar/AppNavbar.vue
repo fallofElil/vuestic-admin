@@ -53,7 +53,7 @@
       </div>
       <app-navbar-actions
         class="app-navbar__actions md5 lg4"
-        :user-name="userName"
+        :user-name="currentUser"
         :is-top-bar.sync="isTopBarProxy"
       />
     </div>
@@ -70,6 +70,7 @@ import VaIconMenu from '../../../iconset/VaIconMenu'
 import VaIconMenuCollapsed from '../../../iconset/VaIconMenuCollapsed'
 import AppNavbarActions from './components/AppNavbarActions'
 import { colorShiftHsl, ColorThemeMixin } from '../../../services/vuestic-ui'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'app-navbar',
@@ -90,11 +91,6 @@ export default {
       type: Boolean,
       required: true,
     },
-  },
-  data () {
-    return {
-      userName: 'Vasili S',
-    }
   },
   computed: {
     isTopBarProxy: {
@@ -140,6 +136,8 @@ export default {
         }).css : 'transparent',
       }
     },
+
+    ...mapGetters(['currentUser']),
   },
 }
 </script>

@@ -216,5 +216,26 @@ export const navigationRoutes = {
         },
       ],
     },
+    {
+      name: 'users',
+      displayName: 'Пользователи',
+      meta: {
+        iconClass: 'vuestic-iconset vuestic-iconset-user',
+      },
+    },
+    {
+      name: 'orders',
+      displayName: 'Заказы',
+      meta: {
+        iconClass: 'fa fa-shopping-cart',
+      },
+    },
+    {
+      name: 'goods',
+      displayName: 'Товары',
+      meta: {
+        iconClass: 'vuestic-iconset vuestic-iconset-components',
+      },
+    },
   ],
 }

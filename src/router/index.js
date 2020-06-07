@@ -385,6 +385,21 @@ export default new Router({
             },
           ],
         },
+        {
+          name: 'users',
+          path: 'users',
+          component: () => import('../components/dashboard/DashboardUsers'),
+        },
+        {
+          name: 'orders',
+          path: 'orders',
+          component: () => import('../components/dashboard/DashboardOrders'),
+        },
+        {
+          name: 'goods',
+          path: 'goods',
+          component: () => import('../components/dashboard/DashboardGoods'),
+        },
       ],
     },
   ],
