@@ -396,6 +396,11 @@ export default new Router({
           component: () => import('../components/dashboard/DashboardOrders'),
         },
         {
+          name: 'categories',
+          path: 'categories',
+          component: () => import('../components/dashboard/DashboardCategories'),
+        },
+        {
           name: 'goods',
           path: 'goods',
           component: () => import('../components/dashboard/DashboardGoods'),

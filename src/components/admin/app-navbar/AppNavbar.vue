@@ -27,20 +27,20 @@
         </router-link>
       </div>
       <div class="app-navbar__center lg5 md4">
-        <span
-          class="app-navbar__text"
-          :style="{color: this.$themes.gray}"
-        >
-          {{$t('navbar.messageUs')}}&nbsp;
-          <a
-            href="mailto:hello@epicmax.co"
-            target="_blank"
-            class="app-navbar__mailto-link"
-            :style="{color: this.$themes.primary}"
-          >
-            hello@epicmax.co
-          </a>
-        </span>
+        <!--        <span-->
+        <!--          class="app-navbar__text"-->
+        <!--          :style="{color: this.$themes.gray}"-->
+        <!--        >-->
+        <!--          {{$t('navbar.messageUs')}}&nbsp;-->
+        <!--          <a-->
+        <!--            href="mailto:hello@epicmax.co"-->
+        <!--            target="_blank"-->
+        <!--            class="app-navbar__mailto-link"-->
+        <!--            :style="{color: this.$themes.primary}"-->
+        <!--          >-->
+        <!--            hello@epicmax.co-->
+        <!--          </a>-->
+        <!--        </span>-->
         <va-button
           href="https://github.com/epicmaxco/vuestic-admin"
           color="#000000"
@@ -176,6 +176,7 @@ $nav-border-side-width: 3.1875rem;
     width: 10rem;
     margin: 0 0 0 1rem !important;
     font-weight: bold;
+    visibility: hidden;
 
     .va-button__content__icon-left.fa-github {
       font-size: 1.5rem;

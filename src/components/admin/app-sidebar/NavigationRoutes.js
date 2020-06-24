@@ -231,6 +231,13 @@ export const navigationRoutes = {
       },
     },
     {
+      name: 'categories',
+      displayName: 'Категории',
+      meta: {
+        iconClass: 'fa fa-cubes',
+      },
+    },
+    {
       name: 'goods',
       displayName: 'Товары',
       meta: {
