@@ -68,7 +68,7 @@ export default {
     userName: '',
     userEmail: '',
     userRole: '',
-    roles: ['client', 'admin'],
+    roles: ['customer', 'admin'],
   }),
   computed: {
     fields () {
